@@ -1,0 +1,124 @@
+/* CSS for TodoApp */
+.todoapp {
+  font-family: cursive;
+  color: white;
+  height: auto;
+  min-height: 600px;
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ffaaaa; /* Updated background gradient */
+}
+
+.todoapp h1 {
+  text-align: center; /* Updated heading color */
+}
+
+.todoapp form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.todoapp input[type="text"],
+.todoapp input[type="date"],
+.todoapp select {
+  color: #e50914;
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: #eaffd0; /* Updated input background color */
+}
+
+.todoapp button[type="submit"] {
+  padding: 8px 16px;
+  background-color: #ff2b2b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.todoapp ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todoapp li {
+  margin-bottom: 8px;
+  padding: 10px;
+  background-color: #FF6B6B; /* Updated list item background color */
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+}
+
+.todoapp li .checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.todoapp li .checkbox-container input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.todoapp li .task-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  width: 100%; /* Added */
+}
+
+.todoapp li .task-info span {
+  /* Added styles */
+  word-break: break-all;
+  max-width: 600px;
+  direction: ltr;
+  text-align: left;
+  font-weight: bold; /* Make the task text bold */
+  font-size: 16px; /* Increase the font size */
+  color: #1F2833; /* Updated task text color */
+}
+
+.todoapp .completed {
+  text-decoration: line-through;
+}
+
+.todoapp li button {
+  padding: 4px 8px;
+  background-color: #1F2833; /* Updated button background color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.todoapp li button:hover {
+  background-color: #45A29E; /* Updated button hover background color */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .todoapp {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .todoapp form {
+    flex-direction: column;
+  }
+
+  .todoapp input[type="text"],
+  .todoapp input[type="date"],
+  .todoapp select {
+    flex: none;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
